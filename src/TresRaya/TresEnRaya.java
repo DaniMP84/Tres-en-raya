@@ -25,13 +25,14 @@ public class TresEnRaya {
             }
         }
 
-		//Bienvenida al juego y mpstrar el tablero
+		//Bienvenida al juego
 		System.out.println("******************************************");
 		System.out.println("***Bienvenido al juego del tres en raya***");
 		System.out.println("******************************************");
 		System.out.println();
         System.out.println("Este es el tablero:");
         
+        //Imprimo el estado inicial del tablero
         for (int i = 0; i < FILAS; i++) {
             for (int j = 0; j < COLUMNAS; j++) {
                 System.out.print(tablero[i][j] + " ");
@@ -63,6 +64,13 @@ public class TresEnRaya {
                 tablero[fila][columna] = '*';
                 System.out.println("Tirada realizada");
             }
+			//Imprimo el estado actual del tablero
+	        for (int i = 0; i < FILAS; i++) {
+	            for (int j = 0; j < COLUMNAS; j++) {
+	                System.out.print(tablero[i][j] + " ");
+	            }
+	            System.out.println();
+	        }
 		}while(primeroQueJuega == jugador1);
 		
 		
@@ -78,7 +86,13 @@ public class TresEnRaya {
                 tablero[fila][columna] = '*';
                 System.out.println("Tirada realizada");
             }
-			
+			//Imprimo el estado actual del tablero
+	        for (int i = 0; i < FILAS; i++) {
+	            for (int j = 0; j < COLUMNAS; j++) {
+	                System.out.print(tablero[i][j] + " ");
+	            }
+	            System.out.println();
+	        }
 		}while(primeroQueJuega == jugador2);
 		
 		

@@ -28,6 +28,16 @@ public class TresEnRaya {
 		String primeroQueJuega = moneda.nextInt(2) == 0 ? jugador1 : jugador2;
 		System.out.println("Primero le toca jugar a " + primeroQueJuega);
 		
+		do {
+			
+			
+		}while(primeroQueJuega == jugador1);
+		
+		
+		do {
+			
+		}while(primeroQueJuega == jugador2);
+		
 		
 	}
 

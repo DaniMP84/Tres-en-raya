@@ -58,10 +58,10 @@ public class TresEnRaya {
 			int columna = in.nextInt() -1;
 			if (fila < 0 || fila >= FILAS || columna < 0 || columna >= COLUMNAS) {
                 System.out.println("Error: La ubicación indicada no existe en el tablero");
-            } else if (tablero[fila][columna] == '*') {
+            } else if (tablero[fila][columna] == 'X') {
                 System.out.println("Error: Ese hueco ya esta ocupado, intentalo de nuevo");
             } else {
-                tablero[fila][columna] = '*';
+                tablero[fila][columna] = 'X';
                 System.out.println("Tirada realizada");
             }
 			//Imprimo el estado actual del tablero
@@ -80,10 +80,10 @@ public class TresEnRaya {
 			int columna = in.nextInt();
 			if (fila < 0 || fila >= FILAS || columna < 0 || columna >= COLUMNAS) {
                 System.out.println("Error: La ubicación indicada no existe en el tablero");
-            } else if (tablero[fila][columna] == '*') {
+            } else if (tablero[fila][columna] == 'X') {
                 System.out.println("Error: Ese hueco ya esta ocupado, intentalo de nuevo");
             } else {
-                tablero[fila][columna] = '*';
+                tablero[fila][columna] = 'X';
                 System.out.println("Tirada realizada");
             }
 			//Imprimo el estado actual del tablero

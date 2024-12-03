@@ -52,8 +52,30 @@ public class TresEnRaya {
 		System.out.println("Se ha lanzado una moneda, primero le toca jugar a " + primeroQueJuega);
 		
 		
-		do {
-			System.out.println("Le toca tirar a: " + jugador1);
+		while(primeroQueJuega == jugador1);{
+			System.out.println("Le toca tirar a: " + jugador1 + "coloca tu ficha:");
+			int fila = in.nextInt() -1;
+			int columna = in.nextInt() -1;
+			if (fila < 0 || fila >= FILAS || columna < 0 || columna >= COLUMNAS) {
+                System.out.println("Error: La ubicación indicada no existe en el tablero");
+            } else if (tablero[fila][columna] == '*') {
+                System.out.println("Error: Ese hueco ya esta ocupado, intentalo de nuevo");
+            } else {
+                tablero[fila][columna] = '*';
+                System.out.println("Tirada realizada");
+            }
+			//Imprimo el estado actual del tablero
+	        for (int i = 0; i < FILAS; i++) {
+	            for (int j = 0; j < COLUMNAS; j++) {
+	                System.out.print(tablero[i][j] + " ");
+	            }
+	            System.out.println();
+	        }
+		}
+		
+		
+		while(primeroQueJuega == jugador2); {
+			System.out.println("Le toca tirar a: " + jugador2 + "coloca tu ficha:");
 			int fila = in.nextInt();
 			int columna = in.nextInt();
 			if (fila < 0 || fila >= FILAS || columna < 0 || columna >= COLUMNAS) {
@@ -71,29 +93,7 @@ public class TresEnRaya {
 	            }
 	            System.out.println();
 	        }
-		}while(primeroQueJuega == jugador1);
-		
-		
-		do {
-			System.out.println("Le toca tirar a: " + jugador2);
-			int fila = in.nextInt();
-			int columna = in.nextInt();
-			if (fila < 0 || fila >= FILAS || columna < 0 || columna >= COLUMNAS) {
-                System.out.println("Error: La ubicación indicada no existe en el tablero");
-            } else if (tablero[fila][columna] == '*') {
-                System.out.println("Error: Ese hueco ya esta ocupado, intentalo de nuevo");
-            } else {
-                tablero[fila][columna] = '*';
-                System.out.println("Tirada realizada");
-            }
-			//Imprimo el estado actual del tablero
-	        for (int i = 0; i < FILAS; i++) {
-	            for (int j = 0; j < COLUMNAS; j++) {
-	                System.out.print(tablero[i][j] + " ");
-	            }
-	            System.out.println();
-	        }
-		}while(primeroQueJuega == jugador2);
+		}
 		
 		
 	}

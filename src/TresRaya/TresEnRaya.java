@@ -31,6 +31,7 @@ public class TresEnRaya {
 		System.out.println("******************************************");
 		System.out.println();
         System.out.println("Este es el tablero:");
+        
         for (int i = 0; i < FILAS; i++) {
             for (int j = 0; j < COLUMNAS; j++) {
                 System.out.print(tablero[i][j] + " ");
@@ -51,12 +52,32 @@ public class TresEnRaya {
 		
 		
 		do {
-			
-			
+			System.out.println("Le toca tirar a: " + jugador1);
+			int fila = in.nextInt();
+			int columna = in.nextInt();
+			if (fila < 0 || fila >= FILAS || columna < 0 || columna >= COLUMNAS) {
+                System.out.println("Error: La ubicación indicada no existe en el tablero");
+            } else if (tablero[fila][columna] == '*') {
+                System.out.println("Error: Ese hueco ya esta ocupado, intentalo de nuevo");
+            } else {
+                tablero[fila][columna] = '*';
+                System.out.println("Tirada realizada");
+            }
 		}while(primeroQueJuega == jugador1);
 		
 		
 		do {
+			System.out.println("Le toca tirar a: " + jugador2);
+			int fila = in.nextInt();
+			int columna = in.nextInt();
+			if (fila < 0 || fila >= FILAS || columna < 0 || columna >= COLUMNAS) {
+                System.out.println("Error: La ubicación indicada no existe en el tablero");
+            } else if (tablero[fila][columna] == '*') {
+                System.out.println("Error: Ese hueco ya esta ocupado, intentalo de nuevo");
+            } else {
+                tablero[fila][columna] = '*';
+                System.out.println("Tirada realizada");
+            }
 			
 		}while(primeroQueJuega == jugador2);
 		

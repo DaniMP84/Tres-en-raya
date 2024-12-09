@@ -69,6 +69,15 @@ public class TresEnRaya {
 	            } else {
 	                tablero[fila][columna] = 'X';
 	                System.out.println("Tirada realizada");
+	            }if(tablero[0][0] == 'X' && tablero[0][1] == 'X' && tablero[0][2] == 'X' || 
+						tablero[1][0] == 'X' && tablero[1][1] == 'X' && tablero[1][2] == 'X' || 
+						tablero[2][0] == 'X' && tablero[2][1] == 'X' && tablero[2][2] == 'X' ||
+						tablero[0][0] == 'X' && tablero[1][1] == 'X' && tablero[2][2] == 'X' || 
+						tablero[2][0] == 'X' && tablero[1][1] == 'X' && tablero[0][2] == 'X' || 
+						tablero[0][0] == 'X' && tablero[1][0] == 'X' && tablero[2][0] == 'X' ||
+						tablero[0][1] == 'X' && tablero[1][1] == 'X' && tablero[2][1] == 'X' || 
+						tablero[0][2] == 'X' && tablero[1][2] == 'X' && tablero[2][2] == 'X'){
+					System.out.println("Enhorabuena " + jugador1 + " has ganado!!");
 	            }
 				//Imprimo el estado actual del tablero
 		        for (int l = 0; l < FILAS; l++) {
@@ -87,6 +96,15 @@ public class TresEnRaya {
 		        } else {
 		        	tablero[fila2][columna2] = 'O';
 		        	System.out.println("Tirada realizada");
+		        }if(tablero[0][0] == 'X' && tablero[0][1] == 'X' && tablero[0][2] == 'X' || 
+						tablero[1][0] == 'X' && tablero[1][1] == 'X' && tablero[1][2] == 'X' || 
+						tablero[2][0] == 'X' && tablero[2][1] == 'X' && tablero[2][2] == 'X' ||
+						tablero[0][0] == 'X' && tablero[1][1] == 'X' && tablero[2][2] == 'X' || 
+						tablero[2][0] == 'X' && tablero[1][1] == 'X' && tablero[0][2] == 'X' || 
+						tablero[0][0] == 'X' && tablero[1][0] == 'X' && tablero[2][0] == 'X' ||
+						tablero[0][1] == 'X' && tablero[1][1] == 'X' && tablero[2][1] == 'X' || 
+						tablero[0][2] == 'X' && tablero[1][2] == 'X' && tablero[2][2] == 'X'){
+					System.out.println("Enhorabuena " + jugador2 + " has ganado!!");
 		        }
 		        //Imprimo el estado actual del tablero
 		        for (int k = 0; k < FILAS; k++) {
@@ -109,7 +127,16 @@ public class TresEnRaya {
             } else {
                 tablero[fila][columna] = 'O';
                 System.out.println("Tirada realizada");
-            }
+            }if(tablero[0][0] == 'X' && tablero[0][1] == 'X' && tablero[0][2] == 'X' || 
+					tablero[1][0] == 'X' && tablero[1][1] == 'X' && tablero[1][2] == 'X' || 
+					tablero[2][0] == 'X' && tablero[2][1] == 'X' && tablero[2][2] == 'X' ||
+					tablero[0][0] == 'X' && tablero[1][1] == 'X' && tablero[2][2] == 'X' || 
+					tablero[2][0] == 'X' && tablero[1][1] == 'X' && tablero[0][2] == 'X' || 
+					tablero[0][0] == 'X' && tablero[1][0] == 'X' && tablero[2][0] == 'X' ||
+					tablero[0][1] == 'X' && tablero[1][1] == 'X' && tablero[2][1] == 'X' || 
+					tablero[0][2] == 'X' && tablero[1][2] == 'X' && tablero[2][2] == 'X'){
+				System.out.println("Enhorabuena " + jugador2 + " has ganado!!");
+            }	
 			//Imprimo el estado actual del tablero
 	        for (int k = 0; k < FILAS; k++) {
 	            for (int j = 0; j < COLUMNAS; j++) {

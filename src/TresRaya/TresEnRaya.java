@@ -16,7 +16,7 @@ public class TresEnRaya {
 		final int FILAS = 3;
 		final int COLUMNAS = 3;
 		char [][] tablero = new char [FILAS][COLUMNAS];
-		int contador = 9;
+		int contador = 5;
 		
 		//Asigno al tablero vacio un simbolo
 		for (int i = 0; i < FILAS; i++) {
@@ -212,6 +212,9 @@ public class TresEnRaya {
             System.out.println();
         }
    }
-  }
+  }System.out.println();
+   System.out.println("******************************************");
+   System.out.println("************** FIN DEL JUEGO *************");
+   System.out.println("******************************************");
  }
 }

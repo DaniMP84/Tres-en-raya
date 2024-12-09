@@ -1,6 +1,6 @@
 package TresRaya;
 
-import java.util.Random;
+import java.util.*;
 import java.util.Scanner;
 
 public class TresEnRaya {
@@ -48,12 +48,18 @@ public class TresEnRaya {
 		
 		/*Random entre dos opciones, si sale 0 jugador1, si sale 1 es jugador2
 		es como hacer un if.*/
-		String primeroQueJuega = moneda.nextInt(2) == 0 ? jugador1 : jugador2;
-		System.out.println("Se ha lanzado una moneda, primero le toca jugar a " + primeroQueJuega);
+		/*String primeroQueJuega = moneda.nextInt(2) == 0 ? jugador1 : jugador2;*/
+		String primeroQueJuega = Integer.toString(moneda.nextInt(2));		
+		if (primeroQueJuega.equals("0")) {
+			System.out.println("Se ha lanzado una moneda, el primero que juega es " + jugador1);
+		}else {
+			System.out.println("Se ha lanzado una moneda, el primero que juega es" + jugador2);
+		}
 		
 		
-		while(primeroQueJuega == jugador1);{
-			System.out.println("Le toca tirar a: " + jugador1 + "coloca tu ficha:");
+		
+		while(primeroQueJuega.equals(0)); {
+			System.out.println("Le toca tirar a " + jugador1 + ", coloca tu ficha:");
 			int fila = in.nextInt() -1;
 			int columna = in.nextInt() -1;
 			if (fila < 0 || fila >= FILAS || columna < 0 || columna >= COLUMNAS) {
@@ -74,8 +80,8 @@ public class TresEnRaya {
 		}
 		
 		
-		while(primeroQueJuega == jugador2); {
-			System.out.println("Le toca tirar a: " + jugador2 + "coloca tu ficha:");
+		while(primeroQueJuega.equals(1)); {
+			System.out.println("Le toca tirar a " + jugador2 + ", coloca tu ficha:");
 			int fila = in.nextInt();
 			int columna = in.nextInt();
 			if (fila < 0 || fila >= FILAS || columna < 0 || columna >= COLUMNAS) {

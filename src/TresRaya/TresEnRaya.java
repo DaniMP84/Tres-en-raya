@@ -124,10 +124,18 @@ public class TresEnRaya {
             System.out.println("Error: La ubicación indicada no existe en el tablero");
 			} else if (tablero[fila3][columna3] == 'X' || tablero[fila3][columna3] == 'O') {
             System.out.println("Error: Ese hueco ya esta ocupado, intentalo de nuevo");
-			} else if (tablero[fila3][columna3] == 'X');{          
-            System.out.println("Tirada realizada");
-			}if(tablero[0][0] == 'X' && tablero[0][1] == 'X' && tablero[0][2] == 'X'){
-				System.out.println("Enhorabuena " + jugador1 + "has ganado!!");
+			} else {
+					tablero[fila3][columna3] = 'X';        
+					System.out.println("Tirada realizada");
+			}if(tablero[0][0] == 'X' && tablero[0][1] == 'X' && tablero[0][2] == 'X' || 
+					tablero[1][0] == 'X' && tablero[1][1] == 'X' && tablero[1][2] == 'X' || 
+					tablero[2][0] == 'X' && tablero[2][1] == 'X' && tablero[2][2] == 'X' ||
+					tablero[0][0] == 'X' && tablero[1][1] == 'X' && tablero[2][2] == 'X' || 
+					tablero[2][0] == 'X' && tablero[1][1] == 'X' && tablero[0][2] == 'X' || 
+					tablero[0][0] == 'X' && tablero[1][0] == 'X' && tablero[2][0] == 'X' ||
+					tablero[0][1] == 'X' && tablero[1][1] == 'X' && tablero[2][1] == 'X' || 
+					tablero[0][2] == 'X' && tablero[1][2] == 'X' && tablero[2][2] == 'X'){
+				System.out.println("Enhorabuena " + jugador1 + " has ganado!!");
 			}
 			//Imprimo el estado actual del tablero
 			for (int k = 0; k < FILAS; k++) {

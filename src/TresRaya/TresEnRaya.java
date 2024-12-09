@@ -77,28 +77,28 @@ public class TresEnRaya {
 	            }
 	            System.out.println();
 	        }
-		}
-		System.out.println("Le toca tirar a " + jugador2 + ", coloca tu ficha:");
-		int fila2 = in.nextInt() -1;
-		int columna2 = in.nextInt() -1;
-		if (fila2 < 0 || fila2 >= FILAS || columna2 < 0 || columna2 >= COLUMNAS) {
+			}
+			System.out.println("Le toca tirar a " + jugador2 + ", coloca tu ficha:");
+			int fila2 = in.nextInt() -1;
+			int columna2 = in.nextInt() -1;
+			if (fila2 < 0 || fila2 >= FILAS || columna2 < 0 || columna2 >= COLUMNAS) {
             System.out.println("Error: La ubicación indicada no existe en el tablero");
-        } else if (tablero[fila2][columna2] == 'X' || tablero[fila2][columna2] == 'O') {
+			} else if (tablero[fila2][columna2] == 'X' || tablero[fila2][columna2] == 'O') {
             System.out.println("Error: Ese hueco ya esta ocupado, intentalo de nuevo");
-        } else {
+			} else {
             tablero[fila2][columna2] = 'O';
             System.out.println("Tirada realizada");
-        }
-		//Imprimo el estado actual del tablero
-        for (int k = 0; k < FILAS; k++) {
+			}
+			//Imprimo el estado actual del tablero
+			for (int k = 0; k < FILAS; k++) {
             for (int j = 0; j < COLUMNAS; j++) {
                 System.out.print(tablero[k][j] + " ");
             }
             System.out.println();
-        }
+			}
 
-		
-        if(primeroQueJuega.equals(1)) {
+		//condicional identico al primero pero con los players cambiados.
+		if(primeroQueJuega.equals(1)) {
 			System.out.println("Le toca tirar a " + jugador2 + ", coloca tu ficha:");
 			int fila = in.nextInt() -1;
 			int columna = in.nextInt() -1;
@@ -110,6 +110,7 @@ public class TresEnRaya {
                 tablero[fila][columna] = 'O';
                 System.out.println("Tirada realizada");
             }
+			}
 			//Imprimo el estado actual del tablero
 	        for (int k = 0; k < FILAS; k++) {
 	            for (int j = 0; j < COLUMNAS; j++) {
@@ -117,20 +118,22 @@ public class TresEnRaya {
 	            }
 	            System.out.println();
 	        }
-		}
-		System.out.println("Le toca tirar a " + jugador1 + ", coloca tu ficha:");
-		int fila3 = in.nextInt() -1;
-		int columna3 = in.nextInt() -1;
-		if (fila3 < 0 || fila3 >= FILAS || columna3 < 0 || columna3 >= COLUMNAS) {
+			}
+			System.out.println("Le toca tirar a " + jugador1 + ", coloca tu ficha:");
+			int fila3 = in.nextInt() -1;
+			int columna3 = in.nextInt() -1;
+			if (fila3 < 0 || fila3 >= FILAS || columna3 < 0 || columna3 >= COLUMNAS) {
             System.out.println("Error: La ubicación indicada no existe en el tablero");
-        } else if (tablero[fila3][columna3] == 'X' || tablero[fila3][columna3] == 'O') {
+			} else if (tablero[fila3][columna3] == 'X' || tablero[fila3][columna3] == 'O') {
             System.out.println("Error: Ese hueco ya esta ocupado, intentalo de nuevo");
-        } else {
-            tablero[fila3][columna3] = 'O';
+			} /*else if (tablero[fila3][columna3] == 'O');{
+            
             System.out.println("Tirada realizada");
-        }
-		//Imprimo el estado actual del tablero
-        for (int k = 0; k < FILAS; k++) {
+			}*/if(tablero[0][0] == 'X' && tablero[0][1] == 'X' && tablero[0][2] == 'X'){
+				System.out.println("Enhorabuena " + jugador1 + "has ganado!!");
+			}
+			//Imprimo el estado actual del tablero
+			for (int k = 0; k < FILAS; k++) {
             for (int j = 0; j < COLUMNAS; j++) {
                 System.out.print(tablero[k][j] + " ");
             }
@@ -139,4 +142,4 @@ public class TresEnRaya {
 		}
 	}
 
-}
+

@@ -84,9 +84,9 @@ public class TresEnRaya {
 			                System.out.print(tablero[m][n] + " ");
 			            }
 			        	System.out.println();
-			        }System.out.println("******************************************");
-			   	 System.out.println("************** FIN DEL JUEGO *************");
-				 System.out.println("******************************************");
+			        }   System.out.println("******************************************");
+			   	 	    System.out.println("************** FIN DEL JUEGO *************");
+			   	 	    System.out.println("******************************************");
 					return;
 	            }
 				//Imprimo el estado actual del tablero
@@ -121,9 +121,9 @@ public class TresEnRaya {
 			                System.out.print(tablero[m][n] + " ");
 			            }
 			        	System.out.println();
-			        }System.out.println("******************************************");
-			   	 System.out.println("************** FIN DEL JUEGO *************");
-				 System.out.println("******************************************");
+			        }   System.out.println("******************************************");
+			            System.out.println("************** FIN DEL JUEGO *************");
+			   	 	    System.out.println("******************************************");
 					return;
 		        }
 		        //Imprimo el estado actual del tablero
@@ -162,9 +162,9 @@ public class TresEnRaya {
 		                System.out.print(tablero[m][n] + " ");
 		            }
 		        	System.out.println();
-		        }System.out.println("******************************************");
-		   	 System.out.println("************** FIN DEL JUEGO *************");
-			 System.out.println("******************************************");
+		        }	System.out.println("******************************************");
+		   	 	 	System.out.println("************** FIN DEL JUEGO *************");
+		   	 	 	System.out.println("******************************************");
 				return;
             }	
 			//Imprimo el estado actual del tablero
@@ -198,9 +198,10 @@ public class TresEnRaya {
 	            for (int n = 0; n < COLUMNAS; n++) {
 	                System.out.print(tablero[m][n] + " ");
 	            }
-	            }System.out.println("******************************************");
-	       	 System.out.println("************** FIN DEL JUEGO *************");
-	    	 System.out.println("******************************************");
+	            }System.out.println();
+				 System.out.println("******************************************");
+	       	   	 System.out.println("************** FIN DEL JUEGO *************");
+	       	   	 System.out.println("******************************************");
 				return;
 			}
 			//Imprimo el estado actual del tablero
@@ -210,7 +211,7 @@ public class TresEnRaya {
             }
             System.out.println();
         }
-	 }
-	}
+   }
+  }
  }
 }

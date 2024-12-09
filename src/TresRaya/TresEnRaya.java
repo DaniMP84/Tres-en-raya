@@ -13,9 +13,9 @@ public class TresEnRaya {
 		
 		String jugador1;
 		String jugador2;
-		final int FILAS = 3;
-		final int COLUMNAS = 3;
-		char [][] tablero = new char [FILAS][COLUMNAS];
+		final int FILAS = 3;    //indico que es una variable inmutable en el codigo
+		final int COLUMNAS = 3;  //indico que es una variable inmutable en el codigo
+		char [][] tablero = new char [FILAS][COLUMNAS]; //Variables que no cambian su tamaño durante el programa
 		int contador = 5;
 		
 		//Asigno al tablero vacio un simbolo

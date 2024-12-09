@@ -16,7 +16,7 @@ public class TresEnRaya {
 		final int FILAS = 3;
 		final int COLUMNAS = 3;
 		char [][] tablero = new char [FILAS][COLUMNAS];
-		
+		int contador = 9;
 		
 		//Asigno al tablero vacio un simbolo
 		for (int i = 0; i < FILAS; i++) {
@@ -53,12 +53,12 @@ public class TresEnRaya {
 		if (primeroQueJuega.equals("0")) {
 			System.out.println("Se ha lanzado una moneda, el primero que juega es " + jugador1);
 		}else {
-			System.out.println("Se ha lanzado una moneda, el primero que juega es" + jugador2);
+			System.out.println("Se ha lanzado una moneda, el primero que juega es " + jugador2);
 		}
 		
 		
-		
-		while(primeroQueJuega.equals(0)); {
+		for(int i = 1; i < contador; i++) {
+		if(primeroQueJuega.equals(0)); {
 			System.out.println("Le toca tirar a " + jugador1 + ", coloca tu ficha:");
 			int fila = in.nextInt() -1;
 			int columna = in.nextInt() -1;
@@ -71,37 +71,37 @@ public class TresEnRaya {
                 System.out.println("Tirada realizada");
             }
 			//Imprimo el estado actual del tablero
-	        for (int i = 0; i < FILAS; i++) {
+	        for (int l = 0; l < FILAS; l++) {
 	            for (int j = 0; j < COLUMNAS; j++) {
-	                System.out.print(tablero[i][j] + " ");
+	                System.out.print(tablero[l][j] + " ");
 	            }
 	            System.out.println();
 	        }
 		}
 		
 		
-		while(primeroQueJuega.equals(1)); {
+		if(primeroQueJuega.equals(1)); {
 			System.out.println("Le toca tirar a " + jugador2 + ", coloca tu ficha:");
-			int fila = in.nextInt();
-			int columna = in.nextInt();
+			int fila = in.nextInt() -1;
+			int columna = in.nextInt() -1;
 			if (fila < 0 || fila >= FILAS || columna < 0 || columna >= COLUMNAS) {
                 System.out.println("Error: La ubicación indicada no existe en el tablero");
             } else if (tablero[fila][columna] == 'X') {
                 System.out.println("Error: Ese hueco ya esta ocupado, intentalo de nuevo");
             } else {
-                tablero[fila][columna] = 'X';
+                tablero[fila][columna] = 'O';
                 System.out.println("Tirada realizada");
             }
 			//Imprimo el estado actual del tablero
-	        for (int i = 0; i < FILAS; i++) {
+	        for (int k = 0; k < FILAS; k++) {
 	            for (int j = 0; j < COLUMNAS; j++) {
-	                System.out.print(tablero[i][j] + " ");
+	                System.out.print(tablero[k][j] + " ");
 	            }
 	            System.out.println();
 	        }
 		}
 		
-		
+		}
 	}
 
 }

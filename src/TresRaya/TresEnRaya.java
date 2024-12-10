@@ -16,7 +16,7 @@ public class TresEnRaya {
 		final int FILAS = 3;    //indico que es una variable inmutable en el codigo
 		final int COLUMNAS = 3;  //indico que es una variable inmutable en el codigo
 		char [][] tablero = new char [FILAS][COLUMNAS]; //Variables que no cambian su tamaño durante el programa
-		int contador = 5;
+		int contador = 9;
 		
 		//Asigno al tablero vacio un simbolo
 		for (int i = 0; i < FILAS; i++) {
@@ -58,6 +58,7 @@ public class TresEnRaya {
 		
 		
 		for(int i = 1; i < contador; i++) {
+			boolean sinMasHuecos = false;
 			if(primeroQueJuega.equals("0")) {
 				System.out.println("Le toca tirar a " + jugador1 + ", coloca tu ficha:");
 				int fila = in.nextInt() -1;
@@ -69,7 +70,23 @@ public class TresEnRaya {
 	            } else {
 	                tablero[fila][columna] = 'X';
 	                System.out.println("Tirada realizada");
-	            }if(tablero[0][0] == 'X' && tablero[0][1] == 'X' && tablero[0][2] == 'X' || 
+	            }
+				for (int z = 0; z < FILAS; z++) {
+                    for (int x = 0; x < COLUMNAS; x++) {
+                    if (tablero[z][x] == '*') {
+                        sinMasHuecos = true;
+                        break;
+                        }
+                   }if (sinMasHuecos) 
+                	    break;
+                   }if (!sinMasHuecos) { 
+                    System.out.println("¡El juego termina en empate!");
+                    System.out.println("******************************************");
+                    System.out.println("************** FIN DEL JUEGO *************");    //Cuando no hay más huecos
+                    System.out.println("******************************************");
+                    return;
+                }
+				if(tablero[0][0] == 'X' && tablero[0][1] == 'X' && tablero[0][2] == 'X' || 
 						tablero[1][0] == 'X' && tablero[1][1] == 'X' && tablero[1][2] == 'X' || 
 						tablero[2][0] == 'X' && tablero[2][1] == 'X' && tablero[2][2] == 'X' ||
 						tablero[0][0] == 'X' && tablero[1][1] == 'X' && tablero[2][2] == 'X' ||     //Condiciones para ganar
@@ -106,7 +123,22 @@ public class TresEnRaya {
 		        } else {
 		        	tablero[fila2][columna2] = 'O';
 		        	System.out.println("Tirada realizada");
-		        }if(tablero[0][0] == 'X' && tablero[0][1] == 'O' && tablero[0][2] == 'O' || 
+		        }				for (int z = 0; z < FILAS; z++) {
+                    for (int x = 0; x < COLUMNAS; x++) {
+                    if (tablero[z][x] == '*') {
+                        sinMasHuecos = true;
+                        break;
+                        }
+                   }if (sinMasHuecos) 
+                	    break;
+                   }if (!sinMasHuecos) { 
+                    System.out.println("¡El juego termina en empate!");
+                    System.out.println("******************************************");
+                    System.out.println("************** FIN DEL JUEGO *************");    //Cuando no hay más huecos
+                    System.out.println("******************************************");
+                    return;
+                }
+		        if(tablero[0][0] == 'X' && tablero[0][1] == 'O' && tablero[0][2] == 'O' || 
 						tablero[1][0] == 'O' && tablero[1][1] == 'O' && tablero[1][2] == 'O' || 
 						tablero[2][0] == 'O' && tablero[2][1] == 'O' && tablero[2][2] == 'O' ||     //Condiciones para ganar
 						tablero[0][0] == 'O' && tablero[1][1] == 'O' && tablero[2][2] == 'O' || 
@@ -147,7 +179,22 @@ public class TresEnRaya {
             } else {
                 tablero[fila][columna] = 'O';
                 System.out.println("Tirada realizada");
-            }if(tablero[0][0] == 'X' && tablero[0][1] == 'O' && tablero[0][2] == 'O' || 
+            }				for (int z = 0; z < FILAS; z++) {
+                for (int x = 0; x < COLUMNAS; x++) {
+                if (tablero[z][x] == '*') {
+                    sinMasHuecos = true;
+                    break;
+                    }
+               }if (sinMasHuecos) 
+            	    break;
+               }if (!sinMasHuecos) { 
+                System.out.println("¡El juego termina en empate!");
+                System.out.println("******************************************");
+                System.out.println("************** FIN DEL JUEGO *************");    //Cuando no hay más huecos
+                System.out.println("******************************************");
+                return;
+            }
+			if(tablero[0][0] == 'X' && tablero[0][1] == 'O' && tablero[0][2] == 'O' || 
 					tablero[1][0] == 'O' && tablero[1][1] == 'O' && tablero[1][2] == 'O' || 
 					tablero[2][0] == 'O' && tablero[2][1] == 'O' && tablero[2][2] == 'O' ||      //Condiciones para ganar
 					tablero[0][0] == 'O' && tablero[1][1] == 'O' && tablero[2][2] == 'O' || 
@@ -184,7 +231,22 @@ public class TresEnRaya {
 			} else {
 					tablero[fila3][columna3] = 'X';        
 					System.out.println("Tirada realizada");
-			}if(tablero[0][0] == 'X' && tablero[0][1] == 'X' && tablero[0][2] == 'X' ||      //Condiciones para ganar
+			}				for (int z = 0; z < FILAS; z++) {
+                for (int x = 0; x < COLUMNAS; x++) {
+                if (tablero[z][x] == '*') {
+                    sinMasHuecos = true;
+                    break;
+                    }
+               }if (sinMasHuecos) 
+            	    break;
+               }if (!sinMasHuecos) { 
+                System.out.println("¡El juego termina en empate!");
+                System.out.println("******************************************");
+                System.out.println("************** FIN DEL JUEGO *************");    //Cuando no hay más huecos
+                System.out.println("******************************************");
+                return;
+            }
+			if(tablero[0][0] == 'X' && tablero[0][1] == 'X' && tablero[0][2] == 'X' ||      //Condiciones para ganar
 					tablero[1][0] == 'X' && tablero[1][1] == 'X' && tablero[1][2] == 'X' || 
 					tablero[2][0] == 'X' && tablero[2][1] == 'X' && tablero[2][2] == 'X' ||
 					tablero[0][0] == 'X' && tablero[1][1] == 'X' && tablero[2][2] == 'X' || 

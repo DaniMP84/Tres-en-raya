@@ -58,7 +58,7 @@ public class TresEnRaya {
 		
 		
 		for(int i = 1; i < contador; i++) {
-			boolean sinMasHuecos = false;
+			boolean sinMasHuecos = true;
 			if(primeroQueJuega.equals("0")) {
 				System.out.println("Le toca tirar a " + jugador1 + ", coloca tu ficha:");
 				int fila = in.nextInt() -1;
@@ -71,16 +71,19 @@ public class TresEnRaya {
 	                tablero[fila][columna] = 'X';
 	                System.out.println("Tirada realizada");
 	            }
-				for (int z = 0; z < FILAS; z++) {
+				 for (int z = 0; z < FILAS; z++) {
                     for (int x = 0; x < COLUMNAS; x++) {
                     if (tablero[z][x] == '*') {
-                        sinMasHuecos = true;
+                        sinMasHuecos = false;
                         break;
                         }
-                   }if (sinMasHuecos) 
-                	    break;
-                   }if (!sinMasHuecos) { 
-                    System.out.println("¡El juego termina en empate!");
+                   }
+                    if (!sinMasHuecos) 
+                    	break;
+                    }
+				 if (sinMasHuecos) {
+					System.out.println();
+                    System.out.println("       ¡El juego termina en empate!");
                     System.out.println("******************************************");
                     System.out.println("************** FIN DEL JUEGO *************");    //Cuando no hay más huecos
                     System.out.println("******************************************");
@@ -94,6 +97,7 @@ public class TresEnRaya {
 						tablero[0][0] == 'X' && tablero[1][0] == 'X' && tablero[2][0] == 'X' ||
 						tablero[0][1] == 'X' && tablero[1][1] == 'X' && tablero[2][1] == 'X' || 
 						tablero[0][2] == 'X' && tablero[1][2] == 'X' && tablero[2][2] == 'X'){
+					System.out.println();
 					System.out.println("Enhorabuena " + jugador1 + " has ganado!!");
 					//Muestra el tablero al ganar
 					for (int m = 0; m < FILAS; m++) {
@@ -123,16 +127,19 @@ public class TresEnRaya {
 		        } else {
 		        	tablero[fila2][columna2] = 'O';
 		        	System.out.println("Tirada realizada");
-		        }				for (int z = 0; z < FILAS; z++) {
+		        }for (int z = 0; z < FILAS; z++) {
                     for (int x = 0; x < COLUMNAS; x++) {
                     if (tablero[z][x] == '*') {
-                        sinMasHuecos = true;
+                        sinMasHuecos = false;
                         break;
                         }
-                   }if (sinMasHuecos) 
-                	    break;
-                   }if (!sinMasHuecos) { 
-                    System.out.println("¡El juego termina en empate!");
+                   }
+                    if (!sinMasHuecos) 
+                    	break;
+                    }
+				 if (sinMasHuecos) {
+					System.out.println();
+                    System.out.println("       ¡El juego termina en empate!");
                     System.out.println("******************************************");
                     System.out.println("************** FIN DEL JUEGO *************");    //Cuando no hay más huecos
                     System.out.println("******************************************");
@@ -146,6 +153,7 @@ public class TresEnRaya {
 						tablero[0][0] == 'O' && tablero[1][0] == 'O' && tablero[2][0] == 'O' ||
 						tablero[0][1] == 'O' && tablero[1][1] == 'O' && tablero[2][1] == 'O' || 
 						tablero[0][2] == 'O' && tablero[1][2] == 'O' && tablero[2][2] == 'O'){
+		        	System.out.println();
 					System.out.println("Enhorabuena " + jugador2 + " has ganado!!");
 					//Muestra el tablero al ganar
 					for (int m = 0; m < FILAS; m++) {
@@ -179,16 +187,19 @@ public class TresEnRaya {
             } else {
                 tablero[fila][columna] = 'O';
                 System.out.println("Tirada realizada");
-            }				for (int z = 0; z < FILAS; z++) {
+            }for (int z = 0; z < FILAS; z++) {
                 for (int x = 0; x < COLUMNAS; x++) {
                 if (tablero[z][x] == '*') {
-                    sinMasHuecos = true;
+                    sinMasHuecos = false;
                     break;
                     }
-               }if (sinMasHuecos) 
-            	    break;
-               }if (!sinMasHuecos) { 
-                System.out.println("¡El juego termina en empate!");
+               }
+                if (!sinMasHuecos) 
+                	break;
+                }
+			 if (sinMasHuecos) {
+				System.out.println();
+                System.out.println("       ¡El juego termina en empate!");
                 System.out.println("******************************************");
                 System.out.println("************** FIN DEL JUEGO *************");    //Cuando no hay más huecos
                 System.out.println("******************************************");
@@ -202,6 +213,7 @@ public class TresEnRaya {
 					tablero[0][0] == 'O' && tablero[1][0] == 'O' && tablero[2][0] == 'O' ||
 					tablero[0][1] == 'O' && tablero[1][1] == 'O' && tablero[2][1] == 'O' || 
 					tablero[0][2] == 'O' && tablero[1][2] == 'O' && tablero[2][2] == 'O'){
+				System.out.println();
 				System.out.println("Enhorabuena " + jugador2 + " has ganado!!");
 				//Muestra el tablero al ganar
 				for (int m = 0; m < FILAS; m++) {
@@ -231,16 +243,19 @@ public class TresEnRaya {
 			} else {
 					tablero[fila3][columna3] = 'X';        
 					System.out.println("Tirada realizada");
-			}				for (int z = 0; z < FILAS; z++) {
+			}for (int z = 0; z < FILAS; z++) {
                 for (int x = 0; x < COLUMNAS; x++) {
                 if (tablero[z][x] == '*') {
-                    sinMasHuecos = true;
+                    sinMasHuecos = false;
                     break;
                     }
-               }if (sinMasHuecos) 
-            	    break;
-               }if (!sinMasHuecos) { 
-                System.out.println("¡El juego termina en empate!");
+               }
+                if (!sinMasHuecos) 
+                	break;
+                }
+			 if (sinMasHuecos) {
+				System.out.println();
+                System.out.println("       ¡El juego termina en empate!");
                 System.out.println("******************************************");
                 System.out.println("************** FIN DEL JUEGO *************");    //Cuando no hay más huecos
                 System.out.println("******************************************");
@@ -254,6 +269,7 @@ public class TresEnRaya {
 					tablero[0][0] == 'X' && tablero[1][0] == 'X' && tablero[2][0] == 'X' ||
 					tablero[0][1] == 'X' && tablero[1][1] == 'X' && tablero[2][1] == 'X' || 
 					tablero[0][2] == 'X' && tablero[1][2] == 'X' && tablero[2][2] == 'X'){
+				System.out.println();
 				System.out.println("Enhorabuena " + jugador1 + " has ganado!!");
 				//Muestra el tablero al ganar
 				for (int m = 0; m < FILAS; m++) {

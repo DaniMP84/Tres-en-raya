@@ -17,6 +17,7 @@ public class TresEnRaya {
 		final int COLUMNAS = 3;  //indico que es una variable inmutable en el codigo
 		char [][] tablero = new char [FILAS][COLUMNAS]; //Variables que no cambian su tamaño durante el programa
 		int contador = 9;
+		String revancha ="";
 		
 		//Asigno al tablero vacio un simbolo
 		for (int i = 0; i < FILAS; i++) {
@@ -56,7 +57,7 @@ public class TresEnRaya {
 			System.out.println("Se ha lanzado una moneda, el primero que juega es " + jugador2);
 		}
 		
-		
+	do {	
 		for(int i = 1; i < contador; i++) {
 			boolean sinMasHuecos = true;
 			if(primeroQueJuega.equals("0")) {
@@ -176,7 +177,7 @@ public class TresEnRaya {
 		        	System.out.println();
 		        }
 			}
-
+   
 		//condicional identico al primero pero con los players cambiados.
 		if(primeroQueJuega.equals("1")) {
 			System.out.println("Le toca tirar a " + jugador2 + ", coloca tu ficha:");
@@ -291,8 +292,12 @@ public class TresEnRaya {
             }
             System.out.println();
         }
-   }
-  }System.out.println();
+      }
+     }System.out.println("¿Quereis una revancha?si/no");
+      in.nextLine();
+      revancha = in.nextLine();
+	}while(revancha.equals("si"));
+   System.out.println();
    System.out.println("******************************************");
    System.out.println("************** FIN DEL JUEGO *************");
    System.out.println("******************************************");

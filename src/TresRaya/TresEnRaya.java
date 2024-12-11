@@ -71,16 +71,18 @@ public class TresEnRaya {
 	                tablero[fila][columna] = 'X';
 	                System.out.println("Tirada realizada");
 	            }
+				 //Bucle anidado, recorre el tablero para encontrar huecos
 				 for (int z = 0; z < FILAS; z++) {
-                    for (int x = 0; x < COLUMNAS; x++) {
+                    for (int x = 0; x < COLUMNAS; x++) {	
                     if (tablero[z][x] == '*') {
-                        sinMasHuecos = false;
-                        break;
+                        sinMasHuecos = false;       
+                        break;                //Sale del bucle interno ya que encuentra huecos
                         }
                    }
-                    if (!sinMasHuecos) 
+                    if (!sinMasHuecos) //Sale del bucle externo también
                     	break;
                     }
+				 //Si no quedan más huecos sale del bucle delcarando el empate
 				 if (sinMasHuecos) {
 					System.out.println();
                     System.out.println("       ¡El juego termina en empate!");

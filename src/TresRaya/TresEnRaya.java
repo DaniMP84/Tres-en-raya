@@ -60,6 +60,14 @@ public class TresEnRaya {
 		}
 
 		do {
+			if(revancha.equals("si")) {
+				for (int i = 0; i < FILAS; i++) {
+					for (int j = 0; j < COLUMNAS; j++) {
+						tablero[i][j] = '*';
+					}
+				}
+				
+			}
 			for (int i = 1; i < contador; i++) {
 				boolean sinMasHuecos = true;
 				if (primeroQueJuega.equals("0")) {
@@ -241,7 +249,7 @@ public class TresEnRaya {
 						System.out.println("******************************************");
 						System.out.println("************** FIN DEL JUEGO *************");
 						System.out.println("******************************************");
-						return;
+						break;
 					}
 					// Imprimo el estado actual del tablero
 					for (int k = 0; k < FILAS; k++) {
@@ -316,7 +324,7 @@ public class TresEnRaya {
 			System.out.println("¿Quereis una revancha?si/no");
 			in.nextLine();
 			revancha = in.nextLine();
-		} while (revancha.equals("si"));
+		} while (revancha.toLowerCase().equals("si"));
 		System.out.println();
 		System.out.println("******************************************");
 		System.out.println("************** FIN DEL JUEGO *************");
